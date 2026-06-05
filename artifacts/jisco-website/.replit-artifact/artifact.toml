@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "JISCo Website"
+version = "1.0.0"
+id = "artifacts/jisco-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24153
+
+[services.development]
+run = "pnpm --filter @workspace/jisco-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/jisco-website", "run", "build" ]
+publicDir = "artifacts/jisco-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24153"
+BASE_PATH = "/"

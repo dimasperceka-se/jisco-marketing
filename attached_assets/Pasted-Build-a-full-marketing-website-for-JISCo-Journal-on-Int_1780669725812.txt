@@ -1,0 +1,92 @@
+Build a full marketing website for "JISCo" (Journal on Interdisciplinary Science and Community) — an academic publication platform similar to IEEE.org.
+
+---
+
+## DESIGN DIRECTION
+
+Aesthetic: Editorial-academic with a modern scientific precision feel. Think: clean authority, not cold bureaucracy. Inspired by high-end scientific journals + editorial magazines like Nature or MIT Press.
+
+- Color palette: Deep navy (#0A1628) as dominant, crisp white, and a sharp gold/amber accent (#E8A020) for highlights. Avoid purple gradients entirely.
+- Typography: Use Google Fonts — "Playfair Display" for headings (authoritative, scholarly), "Source Serif 4" for body text (readable, academic), "JetBrains Mono" for metadata/labels.
+- Motion: Subtle entrance animations on scroll (fade + slight translateY). Smooth hover states on cards. No excessive animations.
+- Layout: Magazine-grid layout for articles. Asymmetric hero. Grid-breaking pull-quotes.
+
+---
+
+## PAGES / SECTIONS (single HTML file, all sections)
+
+### 1. NAVBAR
+- Logo: "JISCo" with tagline "Journal on Interdisciplinary Science and Community"
+- Nav links: Home, About, Journal Issues, Submit Manuscript, Editorial Board, Contact
+- CTA button: "Submit Paper" (gold accent)
+- Sticky on scroll with subtle backdrop-blur
+
+### 2. HERO SECTION
+- Large editorial headline: "Advancing Knowledge Across Disciplines"
+- Subtext about the journal's mission
+- Two CTA buttons: "Browse Issues" and "Submit Manuscript"
+- Background: Dark navy with subtle geometric grid pattern (CSS only)
+- Stats bar below hero: e.g. "1,200+ Published Articles | 48 Countries | 300+ Peer Reviewers | Impact Factor 2.8"
+
+### 3. FEATURED ARTICLES
+- Grid of 3 featured research article cards
+- Each card: discipline tag (e.g. "Environmental Science"), article title, author name, abstract excerpt (2 lines), publication date, "Read More" button
+- Use placeholder/sample data
+
+### 4. JOURNAL SCOPE & FOCUS AREAS
+- Section title: "Interdisciplinary Research Domains"
+- Icon grid (6 focus areas): Environmental Science, Public Health, Social Engineering, Technology & Society, Agricultural Innovation, Community Development
+- Use SVG icons or Unicode symbols styled with CSS
+
+### 5. SUBMISSION PROCESS
+- 4-step horizontal timeline: Submit → Peer Review → Revision → Publication
+- Each step has icon, title, short description
+
+### 6. LATEST ISSUES
+- 3 journal issue cards showing volume/issue number, publication date, cover color (CSS gradient), article count
+- "View All Issues" button
+
+### 7. EDITORIAL BOARD PREVIEW
+- 3 editorial board member cards: name, title, institution, area of expertise
+- Clean card design with gold left-border accent
+
+### 8. CALL TO ACTION / AUTHOR GUIDELINES
+- Split section: left = "For Authors" (submission guidelines link, manuscript template), right = "For Reviewers" (reviewer registration)
+- Dark background section
+
+### 9. FOOTER
+- Logo + mission statement
+- Links: About, Scope, Ethics Policy, Open Access Policy, Contact
+- ISSN placeholder, DOI prefix, copyright
+- Social media icons (SVG)
+
+---
+
+## TECHNICAL REQUIREMENTS
+
+- Single HTML file with embedded CSS and JS
+- Fully responsive (mobile, tablet, desktop)
+- Use CSS custom properties (variables) for all colors/fonts
+- Smooth scroll behavior
+- Mobile hamburger menu (pure JS, no libraries)
+- No external JS frameworks — vanilla JS only
+- Google Fonts via @import
+- All sample content in Indonesian and English (bilingual headers okay, content in English)
+
+---
+
+## SAMPLE DATA TO USE
+
+Journal Name: JISCo — Journal on Interdisciplinary Science and Community  
+ISSN: 2985-XXXX (Online)  
+Publisher: JISCo Editorial Board  
+Frequency: Biannual (June & December)
+
+Sample article titles:
+1. "Community-Based Water Management in Rural Java: A Participatory Approach"
+2. "Impact of Digital Literacy Programs on Agricultural Productivity in Eastern Indonesia"
+3. "Intersectional Analysis of Urban Waste Management Policies in Tier-2 Cities"
+
+---
+
+Deliver a polished, production-ready single HTML file. The result should look like a legitimate, credible academic journal website — not a template or a mockup.
