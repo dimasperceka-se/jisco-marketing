@@ -92,7 +92,11 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-grid-pattern overflow-hidden">
+    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-orb-pattern overflow-hidden">
+      {/* Third orb — centre top for extra atmospheric depth */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full pointer-events-none z-0"
+        style={{ background: "radial-gradient(ellipse, rgba(232,160,32,0.10) 0%, rgba(232,160,32,0.03) 55%, transparent 75%)", filter: "blur(90px)" }}
+      />
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8">
