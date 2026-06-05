@@ -573,7 +573,7 @@ function Footer() {
           <div>
             <h4 className="font-serif font-bold mb-6 text-lg">Contact</h4>
             <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <li><a href="mailto:editorial@jisco.or.id" className="hover:text-primary transition-colors">editorial@jisco.or.id</a></li>
+              <li><a href="mailto:dimas.perceka@jisco.online" className="hover:text-primary transition-colors">editorial@jisco.or.id</a></li>
               <li>Yogyakarta, Indonesia</li>
             </ul>
           </div>
