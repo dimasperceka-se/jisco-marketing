@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Leaf, HeartPulse, Cpu, MonitorSmartphone, Sprout, Users, Twitter, Linkedin, BookOpen, ExternalLink, ArrowRight } from "lucide-react";
+import { Menu, X, Leaf, HeartPulse, MonitorSmartphone, Sprout, Users, Twitter, Linkedin, BookOpen, ExternalLink, ArrowRight, Construction } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -171,6 +171,30 @@ function Hero() {
   );
 }
 
+function MaintenanceOverlay({ children }: { children: ReactNode }) {
+  return (
+    <div className="relative">
+      <div
+        className="blur-[6px] opacity-50 pointer-events-none select-none"
+        aria-hidden="true"
+      >
+        {children}
+      </div>
+      <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
+        <div className="flex flex-col items-center gap-3 bg-background/80 backdrop-blur-md border border-primary/30 px-8 py-6 text-center shadow-xl">
+          <Construction className="w-8 h-8 text-primary" />
+          <span className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+            Under Maintenance
+          </span>
+          <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+            Temporarily Unavailable
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function FeaturedArticles() {
   const articles = [
     {
@@ -209,6 +233,7 @@ function FeaturedArticles() {
           </h2>
         </div>
 
+        <MaintenanceOverlay>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main featured article */}
           <motion.div 
@@ -271,6 +296,7 @@ function FeaturedArticles() {
             ))}
           </div>
         </div>
+        </MaintenanceOverlay>
       </div>
     </section>
   );
@@ -436,6 +462,7 @@ function EditorialBoard() {
           </h2>
         </div>
 
+        <MaintenanceOverlay>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {board.map((member, i) => (
             <motion.div
@@ -456,6 +483,7 @@ function EditorialBoard() {
             </motion.div>
           ))}
         </div>
+        </MaintenanceOverlay>
       </div>
     </section>
   );
